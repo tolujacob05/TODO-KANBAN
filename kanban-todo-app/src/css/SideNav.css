@@ -1,0 +1,76 @@
+.large, .Sidebar {
+    width: 100vh;
+    min-width: 100%;
+    background: rgb(36, 36, 51);
+}
+aside {
+    height: 100vh;
+    border: 2px solid rgba(255, 255, 255, 0);
+    background: rgb(36, 36, 51);
+}
+/*.Sidebar, .collapsed {
+    width: 80px;
+    min-width: 80px;
+}*/
+.image, img {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.button {
+    cursor: pointer;
+    margin-top: 5rem;
+    display: grid;
+    justify-content: center;
+    color: rgb(170, 127, 210);
+    position: relative;
+    top: rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.button h4 {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover {
+    background: white;
+    border: 1px solid grey;
+    background: grey;
+    height: 2vh ;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.closeMenu {
+    color: #000;
+    z-index: 9999;
+    line-height: 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+.closeMenu p {
+    position: relative;
+    top: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.closeMenu p:hover {
+    border: 2px solid rgb(129, 22, 229);
+    height: 6vh;
+    color: white;
+    background: rgb(129, 22, 229);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
