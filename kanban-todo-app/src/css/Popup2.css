@@ -2,12 +2,19 @@
     display: grid;
     align-items: center;
     justify-content: center;
+    /*margin-left: 22rem;*/
+    /*height: 90vh;
+    border-radius: 10px;
+    background: rgb(55, 54, 54);
+    overflow-x: scroll;*/
+    width: 40vw;
 }
 .task {
     display: grid;
-    height: 45vh;
+    height: 50vh;
+    position: relative;
+    left: 22rem;
     border-radius: 10px;
-    margin: 3rem;
     background: rgb(55, 54, 54);
     margin: 1rem;
     padding: 1rem;
@@ -95,14 +102,16 @@
     border-color: rgb(129, 22, 229);
 }
 .sub {
-    border: 2px solid white;
+    /*border: 2px solid white;
     background: white;
     position: relative;
-    top: -6.5rem;
+    top: 4rem;
     display: flex;
     justify-content: center;
     border-radius: 50px;
     height: 6vh;
+    width: 30vw;*/
+    cursor: pointer;
 }
 .sub h5 {
     display: flex;
@@ -110,6 +119,7 @@
     font-size: 1rem;
     font-family: sans-serif;
     color: rgb(129, 22, 229);
+    
 }
 .status {
     position: relative;
@@ -150,4 +160,11 @@
     font-size: 1rem;
     font-family: sans-serif;
     color: white;
+}
+@media  (max-width: 1000px) {
+    .task {
+        width: 70vw;
+        position: relative;
+        left: 15rem;
+    }
 }

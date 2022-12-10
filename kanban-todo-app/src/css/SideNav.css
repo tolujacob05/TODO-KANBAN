@@ -1,3 +1,8 @@
+.large {
+    display: grid;
+    grid-template-columns: 0.1fr 4fr;
+    gap: 1rem;
+}
 .large, .Sidebar {
     width: 100vh;
     min-width: 100%;
@@ -15,16 +20,39 @@ aside {
 .image, img {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1.6rem;
+}
+.obj {
+    position: relative;
+    top: 2rem;
+}
+.obj h3 {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: rgb(170, 127, 210);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: inherit;
+}
+.obj h3:hover {
+    background: white;
+    border: 1px solid grey;
+    background: grey;
+    height: 2vh ;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 .button {
     cursor: pointer;
-    margin-top: 5rem;
+    margin-top: 2rem;
     display: grid;
     justify-content: center;
     color: rgb(170, 127, 210);
-    position: relative;
-    top: rem;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -73,4 +101,38 @@ aside {
     background: rgb(129, 22, 229);
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
+}
+.kanban {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(53, 53, 60);
+    background: rgb(53, 53, 60);
+    height: 20vh;
+    position: relative;
+    left: -1rem;
+    height: 12vh;
+    padding: 1rem;
+}
+.kanban h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.add {
+    cursor: pointer;
+}
+.add h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    border: 1px solid #635FC7;
+    background: #635FC7;
+    padding: 1rem;
+    height: 20px;
+    border-radius: 50px;
+    /*position: relative;
+    left: -5rem;*/
+}
+.add h4:hover {
+    background: white;
 }

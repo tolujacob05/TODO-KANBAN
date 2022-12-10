@@ -1,0 +1,50 @@
+.container {
+    display: grid;
+    grid-template-columns: 0.4fr 0.4fr 1fr;
+    /*align-items: center;   */
+    position: relative;
+    top: -20rem;
+    margin-left: 19rem;
+}
+.holder {
+    border: 1px solid black;
+    height: 10vh;
+    width: 30vh;
+    border-radius: 20px;
+}
+.todo {
+    display: flex;
+    gap: 0.5rem;
+}
+.yey {
+    border: 2px solid aqua;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    background: aqua;
+}
+.doing {
+    display: flex;
+    gap: 0.5rem;
+}
+.yes {
+    border: 2px solid rgb(129, 22, 229);
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    background: rgb(129, 22, 229);
+}
+.done {
+    display: flex;
+    gap: 0.5rem;
+}
+.ok {
+    border: 2px solid rgb(22, 229, 119);
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    background: rgb(22, 229, 119);
+}
