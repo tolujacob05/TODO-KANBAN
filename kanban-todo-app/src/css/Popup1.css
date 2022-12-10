@@ -1,0 +1,107 @@
+.box {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.pop-box {
+    display: grid;
+    border: 2px solid rgb(48, 46, 46);
+    height: 65vh;
+    width: 60vh;
+    border-radius: 10px;
+    margin: 3rem;
+    background: rgb(55, 54, 54);
+}
+.grey {
+    position: relative;
+    top: -3rem;
+}
+.board {
+    display: flex;
+    margin-top: 2rem;
+    margin: 1rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: white;
+}
+.part {
+    width: 50vh;
+    height: 4vh;
+    position: relative;
+    top: -2rem;
+    border-radius: 10px;
+}
+.name {
+    display: grid;
+    width: 55vh;
+    margin: 1rem;
+}
+.name h6 {
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: white;
+}
+.columns {
+    position: relative;
+    top: -2rem;
+}
+.columns h6 {
+    margin: 1rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: white;
+}
+.type {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+    width: 50vh;
+    height: 4vh;
+    position: relative;
+    top: -0.8rem;
+    border-radius: 10px;
+}
+.fa {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -0.8rem;
+}
+::placeholder {
+    padding: 1rem;
+}
+.create {
+    border: 2px solid white;
+    background: white;
+    border-radius: 50px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    position: relative;
+    top: -2rem;
+    cursor: pointer;
+}
+.create h4 {
+    color: rgb(129, 22, 229);
+    display: flex;
+    align-items: center;
+}
+.new {
+    border: 2px solid rgb(129, 22, 229);
+    background: rgb(129, 22, 229);
+    border-radius: 50px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    position: relative;
+    top: -2rem;
+    cursor: pointer;
+}
+.new h4 {
+    color: white;
+    display: flex;
+    align-items: center;
+}
