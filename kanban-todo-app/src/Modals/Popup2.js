@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../css/Popup2.css';
-import { FaTrash } from 'react-icons/fa';
+import '../css/Pop1.css';
+import { FaTimes } from 'react-icons/fa';
 
 const Popup2 = ({save}) => {
     const [title, setTitle] = useState('');
@@ -64,8 +64,8 @@ const Popup2 = ({save}) => {
 
     return (
         <>
-            <div  className='whole'> 
-                <div className='task'>
+            <div  className='popup-box'> 
+                <div className='box'>
                     <div className='do'>
                         <h1> Add New Task </h1>
                     </div>
@@ -106,10 +106,11 @@ const Popup2 = ({save}) => {
                                 />
                                 <div className='icon' onClick={() => handleSubTaskRemove(index)}>
                                     {subTask.length > 2 &&
-                                        <FaTrash style={{ color: "orangered", fontSize: "1rem"}}/>
+                                        <FaTimes style={{ color: "white", fontSize: "1rem"}}/>
+                                        
                                     }
                                 </div>
-                                {subTask.length - 1 === index && subTask.length < 10 && 
+                                {subTask.length - 1 === index && subTask.length < 15 && 
                                     <button className='sub' onClick={handleSubTaskAdd}>
                                         <span>+Add New Subtask</span>
                                     </button>

@@ -1,6 +1,6 @@
 import React from 'react';
 import SideNav from './SideNav';
-/*import Home from './Home';*/
+import Home from './Home';
 
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
         <>
             <div>
                 <SideNav />
-                {/*<Home />*/}
+                <Home />
             </div>
         </>
     )

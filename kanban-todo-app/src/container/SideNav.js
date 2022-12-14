@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Modal from '@material-ui/core/Modal';
 import Popup1 from '../Modals/Popup1' 
-import Popup2 from '../Modals/Popup2';
-import {
+/*import {
     Menu,
     Sidebar,
     useProSidebar,
-} from 'react-pro-sidebar'
+} from 'react-pro-sidebar'*/
 import {FaEye, FaEyeSlash, FaTable} from 'react-icons/fa'
 import logo from '../img/logo.jpg'
 import '../css/SideNav.css';
-import { v4 as uuidv4 } from "uuid"
 
-const SideNav = ({todoObj}) => {
+const SideNav = () => {
     // Function to handle Popup
     const [open, setOpen] = useState(false);
 
@@ -25,7 +23,7 @@ const SideNav = ({todoObj}) => {
     };
 
     // Function to handle second Popup
-    const [open1, setOpen1] = React.useState(false);
+   /* const [open1, setOpen1] = React.useState(false);
 
     const toggleClose = ( ) => {
         setOpen1(false);
@@ -33,7 +31,7 @@ const SideNav = ({todoObj}) => {
 
     const toggleOpen = () => {
         setOpen1(true);
-    };
+    };*/
 
     // Function to handle to handle SideBar
     const [menuCollapse, setMenuCollapse] = useState(false)
@@ -43,7 +41,7 @@ const SideNav = ({todoObj}) => {
     };
 
     // Function to handle Sisebar collapse
-    const { collapseSidebar } = useProSidebar();
+   /* const { collapseSidebar } = useProSidebar();*/
 
     // Function to save Todo
     const [sideNav, setSideNav] = useState([])
@@ -69,14 +67,15 @@ const SideNav = ({todoObj}) => {
     return (
         <>
             <div className="large">
-                <Sidebar>
+                <aside>
+                {/*<Sidebar>*/}
                     <div className="image">
                         <img src={logo} alt="" />
                     </div>
                     <div className="obj">
                         <h3>{sideNav && sideNav.map((obj) => <li>{obj.Name}</li>)}</h3>
                     </div>
-                    <Menu>
+                    {/*<Menu>*/}
                         <div className="button" onClick={handleOpen}>
                             <FaTable />
                             <h4>+Create New Board</h4>
@@ -87,7 +86,7 @@ const SideNav = ({todoObj}) => {
                         >
                             <Popup1 save = {saveTodo} />
                         </Modal>
-                    </Menu>
+                    {/*</Menu>*/}
                     
                     
                     <div className="closeMenu" onClick={menuIconClick}>
@@ -100,8 +99,8 @@ const SideNav = ({todoObj}) => {
                             Hide Sidebar
                         </p>
                     </div>
-                </Sidebar>
-                <div className='kanban'>
+                {/*</Sidebar>*/}
+               {/* <div className='kanban'>
                     <h3>{todoObj?.Name}</h3>
                     <div className='add' onClick={toggleOpen}>
                         <h4>+Add New Task</h4>
@@ -110,9 +109,10 @@ const SideNav = ({todoObj}) => {
                         onClose={toggleClose}
                         open={open1}
                     >
-                        <Popup2 />
+                        <Popup2 save = {saveTask} />
                     </Modal>
-                </div>
+                </div>*/}
+                </aside>
             </div>
             
         </>
