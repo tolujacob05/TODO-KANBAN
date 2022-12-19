@@ -2,9 +2,8 @@
     display: grid;
     /*grid-template-columns: 0.1fr 4fr;*/
     gap: 1rem;
-    width: 16.7vw;
+    width: 18.7vw;
     position: relative;
-    top: -0.5rem;
     height: 50vh;
 }
 /*.large, .Sidebar {
@@ -14,17 +13,20 @@
 }*/
 aside {
     height: 100vh;
-    border: 2px solid rgba(255, 255, 255, 0);
-    background: rgb(36, 36, 51);
+    width: 19.9vw;
+   /* border: 2px solid var(--background);*/
+    /* background: rgb(47, 47, 63);*/
 }
 /*.Sidebar, .collapsed {
     width: 80px;
     min-width: 80px;
 }*/
 .image, img {
-   /* display: flex;
-    justify-content: center;*/
+    display: flex;
+    justify-content: center;
     margin-top: 1.6rem;
+    position: relative;
+    top: -0.4rem;
 }
 .obj {
     position: relative;
@@ -41,8 +43,8 @@ aside {
 }
 .obj h3:hover {
     background: white;
-    border: 1px solid grey;
-    background: grey;
+    /*border: 1px solid grey;
+    background: grey;*/
     height: 2vh ;
     width: 20vh;
     border-bottom-right-radius: 50px;
@@ -60,29 +62,25 @@ aside {
     color: rgb(170, 127, 210);
     display: flex;
     gap: 1rem;
-}
-.button h4 {
-    font-size: 1.2rem;
-    font-family: sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.button:hover {
+.button h4 {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+.button h4:hover {
     background: white;
     border: 1px solid grey;
     background: grey;
-    height: 2vh ;
-    width: 30vh;
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
     display: flex;
     /*align-items: center;
     justify-content: center;*/
-    padding: 1rem;
 }
 .closeMenu {
-    color: #000;
     z-index: 9999;
     line-height: 20px;
     border-radius: 50%;
@@ -90,7 +88,7 @@ aside {
     font-size: 20px;
     cursor: pointer;
     position: relative;
-    top: 24rem;
+    top: 30rem;
 }
 .closeMenu p {
     position: relative;
@@ -107,42 +105,11 @@ aside {
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
 }
-.kanban {
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid rgb(53, 53, 60);
-    background: rgb(53, 53, 60);
-    height: 20vh;
-    position: relative;
-    left: -1rem;
-    height: 12vh;
-    padding: 1rem;
-}
-.kanban h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    font-family: sans-serif;
-}
-.add {
-    cursor: pointer;
-}
-.add h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: sans-serif;
-    border: 1px solid #635FC7;
-    background: #635FC7;
-    padding: 1rem;
-    height: 20px;
-    border-radius: 50px;
-    /*position: relative;
-    left: -5rem;*/
-}
 .add h4:hover {
     background: white;
 }
 @media (max-width: 1000px) {
-    .large {
+    aside {
         width: 38vw;
     }
 }

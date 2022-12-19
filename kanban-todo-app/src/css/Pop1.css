@@ -186,9 +186,7 @@
         left: 1rem;
     }
     .close-icon {
-        
         right: calc(10% - 10px);
         top: calc(100vh - 85vh - 33px);
-        
     }
 }

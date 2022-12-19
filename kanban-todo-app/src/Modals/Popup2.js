@@ -107,10 +107,9 @@ const Popup2 = ({save}) => {
                                 <div className='icon' onClick={() => handleSubTaskRemove(index)}>
                                     {subTask.length > 2 &&
                                         <FaTimes style={{ color: "white", fontSize: "1rem"}}/>
-                                        
                                     }
                                 </div>
-                                {subTask.length - 1 === index && subTask.length < 15 && 
+                                {subTask.length - 1 === index && subTask.length < 100 && 
                                     <button className='sub' onClick={handleSubTaskAdd}>
                                         <span>+Add New Subtask</span>
                                     </button>

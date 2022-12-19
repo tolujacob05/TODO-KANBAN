@@ -3,10 +3,9 @@ import '../css/Cards.css';
 import { FaTrash } from 'react-icons/fa';
 import Pop1 from '../Modals/Pop1';
 import Pop2 from '../Modals/Pop2';
-import Modal from '@material-ui/core/Modal';
 /*import { Modal } from 'reactstrap'*/
 
-const First = ({taskObj, index, updateTaskArray}) => {
+const Cards = ({taskObj, index, updateTaskArray, deleteTask}) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [subTask, setSubTask] = useState([
@@ -71,70 +70,89 @@ const First = ({taskObj, index, updateTaskArray}) => {
         updateTaskArray(obj, index)
     }
 
+    const handleDelete = () => {
+        deleteTask(index)
+    }
+
+    const handleUpdate = (e) => {
+        e.preventDefault();
+        let taskObj = {}
+        taskObj['Name'] = title
+        taskObj['description'] = description
+        taskObj['subTask'] = subTask
+        updateTask(taskObj)
+    } 
 
     return (
         <> 
-            <div>
-                <main className='container'>
+            <div className='container'>
+                <div className='small'>
+                    <div className='todo'>
+                        <div className='yey'></div>
+                        <h5>TODO</h5> 
+                    </div>
+                    <div className='doing'>
+                            <div className='yes'></div>
+                            <h5>DOING</h5>
+                        </div>
+                        <div className='done'>
+                            <div className='ok'></div>
+                            <h5>DONE</h5>
+                        </div>
+                </div>
+                <div>
                     {/* TODO */}
-                    <div className='first'>
-                        <div className='todo'>
-                            <div className='yey'></div>
-                            <h5>TODO</h5>
-                            <div></div>
+                    {/*<input className='input' type='text' placeholder='my name is'/>*/}
+                    <div className='holder' onClick={togglePopup}>
+                        <div>
+                            <h4>{taskObj.Name}</h4>
                         </div>
-                        {/*<input className='input' type='text' placeholder='my name is'/>*/}
-                        <div className='holder' onClick={togglePopup}>
-                            <div>
-                                <h4>{taskObj.Name}</h4>
-                            </div>
 
-                           {isOpen && (
-                                <Pop1
-                                    content={
-                                        <>
-                                            <button onClick={togglePopup2} updateTask = {updateTask}>Edit</button>
-                                            <button>Delete</button>
-                                            <div>
-                                                <h4>{taskObj.Name}</h4>
-                                            </div>
-                                            <h4>
-                                                {taskObj.description}
-                                            </h4>
-                                            
-                                            {subTask.map((singleSubtask, index) => (
-                                                <ul key={index}>
-                                                {singleSubtask.subtask && <li>{singleSubtask.subtask}</li>}
-                                                </ul>
-                                            ))}
-                                        </>
-                                    }
-                                    handleClose={togglePopup}
-                                />
-                            )}
-                        </div>
+                        {isOpen && (
+                            <Pop1
+                                content={
+                                    <>
+                                        <button className='point' onClick={togglePopup2}>Edit</button>
+                                        <button className='pointer' onClick={handleDelete}>Delete</button>
+                                        <div>
+                                            <h4>{taskObj.Name}</h4>
+                                        </div>
+                                        <h4>
+                                            {taskObj.description}
+                                        </h4>
+                                        
+                                        {subTask.map((singleSubtask, index) => (
+                                            <ul key={index}>
+                                            {singleSubtask.subtask && <li>{singleSubtask.subtask}</li>}
+                                            </ul>
+                                        ))}
+                                    </>
+                                }
+                                handleClose={togglePopup}
+                            />
+                        )}
                     </div>
 
-                    {/* DOING */}
+                    {/* DOING 
                     <div className='second'>
                         <div className='doing'>
                             <div className='yes'></div>
                             <h5>DOING</h5>
                         </div>
-                        {/*<input className='input' type='text' placeholder='my name is'/>*/}
+                        {/*<input className='input' type='text' placeholder='my name is'/>
                         <div className='holder'></div>
-                    </div>
+                    </div>*/}
 
-                    {/* dONE */}
+                    {/* dONE
                     <div className='third'>
                         <div className='done'>
                             <div className='ok'></div>
                             <h5>DONE</h5>
                         </div>
-                        {/*<input className='input' type='text' placeholder='my name is'/>*/}
+                        {/*<input className='input' type='text' placeholder='my name is'/>
                         <div className='holder'></div>
-                    </div>
-                </main>
+                    </div>*/}
+                </div>
             </div> 
 
             {isView && (
@@ -186,7 +204,7 @@ const First = ({taskObj, index, updateTaskArray}) => {
                                                         <FaTrash style={{ color: "orangered", fontSize: "1rem"}}/>
                                                     }
                                                 </div>
-                                                {subTask.length - 1 === index && subTask.length < 15 && 
+                                                {subTask.length - 1 === index && subTask.length < 100 && 
                                                     <button className='sub' onClick={handleSubTaskAdd}>
                                                         <span>+Add New Subtask</span>
                                                     </button>
@@ -209,7 +227,7 @@ const First = ({taskObj, index, updateTaskArray}) => {
                                             </option>
                                         </select>
                                     </div>*/}
-                                    <div className='work'>
+                                    <div className='work' updateTask = {updateTask} onClick = {handleUpdate}>
                                         <h5>Create Task</h5>
                                     </div>
                                 </div>
@@ -223,4 +241,4 @@ const First = ({taskObj, index, updateTaskArray}) => {
     )
 }
 
-export default First;
+export default Cards;
