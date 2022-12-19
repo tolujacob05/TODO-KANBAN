@@ -3,7 +3,7 @@
     grid-template-columns: 0.4fr 0.4fr 1fr;
     /*align-items: center;   */
     position: relative;
-    top: -20rem;
+    top: -22rem;
     margin-left: 19rem;
 }
 .holder {
@@ -47,4 +47,9 @@
     border-radius: 50px;
     margin-top: 1.5rem;
     background: rgb(22, 229, 119);
+}
+@media (max-width:1000px) {
+    .holder {
+        width: 20vh;
+    }
 }

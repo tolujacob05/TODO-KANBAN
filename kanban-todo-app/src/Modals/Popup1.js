@@ -34,9 +34,9 @@ const Popup1 = ( {save} ) => {
     }
     return (
         <>
-            <div className='box'>
-                <div className='pop-box'>
-                    <div className='board'>
+            <div className='show'>
+                <div className='show-box'>
+                    <div>
                         <h1>Add New Board</h1>
                     </div>
                     <div className='grey'>
