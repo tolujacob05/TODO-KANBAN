@@ -1,3 +1,59 @@
-body {
-    background: gray;
+:root {
+    --background: white;
+    --text-primary: black;
+}
+
+
+[data-theme='dark'] {
+    --background: rgb(27, 26, 26);
+    --text-primary: white;
+}
+
+.app {
+    background-color: var(--background);
+    color: var(--text-primary);
+    height: 100vh;
+}
+.i {
+    font-size: 2rem;
+    cursor: pointer ;   
+}
+.theme-toggle {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    left: 3.5rem;
+    border: 1px solid rgb(42, 41, 41);
+    width: 10vw;
+    height: 8vh;
+    background: rgb(42, 42, 43);
+    top: -10rem;
+
+}
+@media  (max-width: 1000px) {
+    .app {
+        width: 114vw;
+    }
+    .theme-toggle {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        position: relative;
+        left: 3.5rem;
+        border: 1px solid rgb(42, 41, 41);
+        width: 20vw;
+        height: 8vh;
+        background: rgb(42, 42, 43);
+    
+    }
+}
+@media (max-width: 800px) {
+    .app {
+        width: 130vw;
+    }
 }

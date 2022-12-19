@@ -1,18 +1,20 @@
 .kanban {
-    margin-left: 16.7rem;
-    display: grid;
-    grid-template-columns: 1fr 0.3fr;
+    margin-left: 18.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*grid-template-columns: 1fr 0.3fr;*/
     position: relative;
-    top: -25rem;
-    border: 2px solid rgb(22, 22, 52);
-    background: rgb(22, 22, 52);
+    top: -26rem;
+   /*  border: 2px solid var(--background);
+    background: rgb(47, 47, 63);*/
+    height: 15vh;
     padding: 1rem;
 }
 .kanban h3 {
     font-size: 2rem;
     font-weight: 600;
     font-family: sans-serif;
-    color: white;
 }
 .add {
     cursor: pointer;
@@ -32,12 +34,25 @@
     justify-content: center;
 }
 .add h4:hover {
-    background: white;
+    background: var(--background);
 }
 @media (max-width:1000px) {
     .kanban {
         position: relative;
-        left: 0.5rem;
-        width: 62vh;
+        left: -1.4rem;
+        width: 65vh;
+        top: -26rem;
     }
 }
+@media (max-width:400px) {
+    .kanban {
+        display: grid;
+        grid-template-columns: .3fr 1fr;
+        position: relative;
+        left: -6.4rem;
+        width: 65vh;
+        top: -26rem;
+    }
+}
+
+

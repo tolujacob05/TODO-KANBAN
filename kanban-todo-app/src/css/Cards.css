@@ -1,16 +1,21 @@
 .container {
-    display: grid;
+    /*display: grid;
     grid-template-columns: 0.4fr 0.4fr 1fr;
     /*align-items: center;   */
     position: relative;
     top: -22rem;
     margin-left: 19rem;
 }
+.small {
+    display: grid;
+    grid-template-columns: 0.4fr 0.4fr 1fr;
+}
 .holder {
     border: 1px solid black;
     height: 10vh;
     width: 30vh;
     border-radius: 20px;
+    position: relative;
 }
 .todo {
     display: flex;
@@ -23,6 +28,11 @@
     border-radius: 50px;
     margin-top: 1.5rem;
     background: aqua;
+}
+.yey h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .doing {
     display: flex;

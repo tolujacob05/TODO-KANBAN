@@ -4,7 +4,7 @@ import Modal from '@material-ui/core/Modal';
 import Popup2 from '../Modals/Popup2';
 import Cards from './Cards.js';
 
-const Home = () => {
+const Home = ({taskObj}) => {
     // Function to handle second Popup
     const [open1, setOpen1] = useState(false);
 
@@ -42,13 +42,21 @@ const Home = () => {
         tempTask[index] = obj
         localStorage.setItem('home', JSON.stringify(tempTask))
         setHome(tempTask)
-        window.location.reload( )
+        window.location.reload()
+    }
+
+    const deleteTask = (index) => {
+        let tempTask = home
+        tempTask.splice(index, 1)
+        localStorage.setItem('home', JSON.stringify(tempTask))
+        setHome(tempTask)
+        window.location.reload()
     }
 
     return (
         <>
             <div className='kanban'>
-                <h3></h3>
+                <h3>TOLUWASE</h3>
                 <div className='add' onClick={toggleOpen}>
                     <h4>+Add New Task</h4>
                 </div>
@@ -60,7 +68,7 @@ const Home = () => {
                 </Modal>
             </div>
             <div>
-               {home && home.map((obj, index) => <Cards taskObj = {obj} index = {index} updateTaskArray = {updateTaskArray} />)} 
+               {home && home.map((obj, index) => <Cards taskObj = {obj} index = {index} updateTaskArray = {updateTaskArray} deleteTask = {deleteTask}/>)} 
             </div>
         </>
     )

@@ -88,7 +88,6 @@ const SideNav = () => {
                         </Modal>
                     {/*</Menu>*/}
                     
-                    
                     <div className="closeMenu" onClick={menuIconClick}>
                         <p>
                             {menuCollapse ? (
