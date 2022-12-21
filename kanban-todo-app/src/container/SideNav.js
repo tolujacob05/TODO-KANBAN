@@ -64,13 +64,43 @@ const SideNav = () => {
         }
     }, [])
 
+    const [show, setShow ] = useState(true)
+
     return (
         <>
             <div className="large">
-                <aside>
+                <div className="aside">
                 {/*<Sidebar>*/}
-                    <div className="image">
-                        <img src={logo} alt="" />
+                    <div className="side">
+                        <div className="image">
+                            <img src={logo} alt="" />
+                            <div className="closeMenu" onClick={() => setShow(!show)}>
+                                <p onClick={menuIconClick}>
+                                    {menuCollapse ? (
+                                        <FaEyeSlash />
+                                    ) : (
+                                        <FaEye />
+                                    )}
+                                    Hide Sidebar
+                                </p>
+                            </div>
+                        </div>
+                        {/*{
+                            show?
+                            <div className="Aimage">
+                                <img src={logo} alt="" />
+                                {/*<div className="closeMenu" onClick={() => setShow(!show)}>
+                                    <p>
+                                        {menuCollapse ? (
+                                            <FaEyeSlash />
+                                        ) : (
+                                            <FaEye />
+                                        )}
+                                        Hide Sidebar
+                                    </p>
+                                </div>
+                            </div>:null
+                        }*/}
                     </div>
                     <div className="obj">
                         <h3>{sideNav && sideNav.map((obj) => <li>{obj.Name}</li>)}</h3>
@@ -88,16 +118,7 @@ const SideNav = () => {
                         </Modal>
                     {/*</Menu>*/}
                     
-                    <div className="closeMenu" onClick={menuIconClick}>
-                        <p>
-                            {menuCollapse ? (
-                                <FaEyeSlash />
-                            ) : (
-                                <FaEye />
-                            )}
-                            Hide Sidebar
-                        </p>
-                    </div>
+                    
                 {/*</Sidebar>*/}
                {/* <div className='kanban'>
                     <h3>{todoObj?.Name}</h3>
@@ -111,7 +132,7 @@ const SideNav = () => {
                         <Popup2 save = {saveTask} />
                     </Modal>
                 </div>*/}
-                </aside>
+                </div>
             </div>
             
         </>

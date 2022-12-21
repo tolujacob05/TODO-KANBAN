@@ -56,7 +56,7 @@ const Home = ({taskObj}) => {
     return (
         <>
             <div className='kanban'>
-                <h3>TOLUWASE</h3>
+                <h3></h3>
                 <div className='add' onClick={toggleOpen}>
                     <h4>+Add New Task</h4>
                 </div>

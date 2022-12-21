@@ -6,8 +6,8 @@
     /*grid-template-columns: 1fr 0.3fr;*/
     position: relative;
     top: -26rem;
-   /*  border: 2px solid var(--background);
-    background: rgb(47, 47, 63);*/
+    border: 2px solid var(--background);
+    background: var(--background);
     height: 15vh;
     padding: 1rem;
 }
@@ -40,8 +40,8 @@
     .kanban {
         position: relative;
         left: -1.4rem;
-        width: 65vh;
-        top: -26rem;
+        width: 80vh;
+        top: -24.6rem;
     }
 }
 @media (max-width:400px) {
@@ -50,8 +50,16 @@
         grid-template-columns: .3fr 1fr;
         position: relative;
         left: -6.4rem;
-        width: 65vh;
+        width: 25vh;
         top: -26rem;
+        gap: 4rem;
+    }
+    .kanban h3 {
+        font-size: 0.5rem;
+    }
+    .add h4 {
+        height: 20px;
+        width: 15vh;
     }
 }
 
