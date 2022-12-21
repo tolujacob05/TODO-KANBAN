@@ -3,7 +3,7 @@
     grid-template-columns: 0.4fr 0.4fr 1fr;
     /*align-items: center;   */
     position: relative;
-    top: -22rem;
+    top: -25rem;
     margin-left: 19rem;
 }
 .small {
@@ -11,7 +11,7 @@
     grid-template-columns: 0.4fr 0.4fr 1fr;
 }
 .holder {
-    border: 1px solid black;
+    border: 1px solid var(--text-primary);
     height: 10vh;
     width: 30vh;
     border-radius: 20px;
@@ -61,5 +61,33 @@
 @media (max-width:1000px) {
     .holder {
         width: 20vh;
+    }
+}
+@media (max-width: 400px) {
+    .container {
+        position: relative;
+        top: -25rem;
+        margin-left: 15rem;
+    }
+    .holder {
+        width: 10vh;
+    }
+    .todo h5 {
+        font-size: 0.5rem;
+    }
+    .doing h5 {
+        font-size: 0.5rem;
+    }
+    .done h5 {
+        font-size: 0.5rem;
+    }
+    .yey {
+        display: none;
+    }
+    .yes {
+        display: none;
+    }
+    .ok {
+        display: none;
     }
 }

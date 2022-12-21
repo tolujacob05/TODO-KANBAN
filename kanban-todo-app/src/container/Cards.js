@@ -80,7 +80,7 @@ const Cards = ({taskObj, index, updateTaskArray, deleteTask}) => {
         taskObj['Name'] = title
         taskObj['description'] = description
         taskObj['subTask'] = subTask
-        updateTask(taskObj)
+        updateTaskArray(taskObj)
     } 
 
     return (
